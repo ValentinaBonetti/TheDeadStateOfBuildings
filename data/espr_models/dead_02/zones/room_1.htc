@@ -1,0 +1,14 @@
+*HC_CTL for zone room_1
+*Date,Mon Oct 12 11:10:20 2020
+*Days,  1
+  1 # number control intervals for all day types
+  6 # number of surfaces
+# (Wall-1 Wall-2 Wall-3 Wall-4 Top-5 Base-6)
+  0.00    24.00 # start and end time of interval
+  4 # CEN calculation control type
+*Doc,User supplied hc values
+*basetop     6.0    5.0 #  index (within the zone) of a typcial base & top
+*floor     5.000  0.700  8.000 #  CEN floor upwd_inside, downwd_inside, external
+*ceiling   5.000  0.700  8.000 #  CEN ceiling upwd_inside, downwd_inside, external
+*slope     5.000  0.700  8.000 #  CEN sloped upwd_inside, downwd_inside, external
+*wall      2.500  2.500  8.000 #  CEN wall inside, partition, external

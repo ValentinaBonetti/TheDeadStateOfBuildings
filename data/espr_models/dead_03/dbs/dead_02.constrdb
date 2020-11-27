@@ -1,0 +1,8 @@
+# Composite construction db defined in ../dbs/dead_02.constrdb
+# based on materials db material.db
+# and based on CFClayers db CFClayers.db2.a
+    1     # no of composites 
+# layers  description  type  optics name   symmetry tag
+    1    high_ins_hig  OPAQ  OPAQUE        NONSYMMETRIC  
+# material ref thickness (m) description & air gap R
+    1    0.1000  Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap

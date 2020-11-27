@@ -1,0 +1,35 @@
+*CONSTRUCTIONS,1.0 # multilayer constructions
+*Text
+A V1 format constructions file imported from a legacy file and
+based on material.db and CFClayers db CFClayers.db1.a
+*End_text
+*date,Mon Oct  5 08:03:35 2020
+*Category,walls,opaque facade constructions,opaque facades representing different ages & performance
+*Category,partitions,internal partitions,partitions between zones (some have matching mirror versions)
+*Category,doors,inside and outside doors,doors of different ages types and performance characteristics
+*Category,glazing,glazing (transparent construc),transparent constructions (using TMC optical properties)
+*Category,frames,frames for doors & windows,frames of various types for use with windows and doors
+*Category,roofs,flat and sloped roofs,roof constructions various ages & performances & orientations
+*Category,ceil_floor,internal ceilings and floors,internal ceilings and floors (& matched mirror constructions)
+*Category,ground,ground floors & crawl-spaces,floors & earth - crawl spaces & ground contact floors & walls
+*Category,fittings,equipment cases furniture etc.,collection of cases for equipment and furnature or fittings
+*Category,legacy,legacy constructions & models,collection of legacy constructions for training & validation
+*Category,UK_code,constructions for UK compliance,collection of constructions taken from UK SBEM
+*Category,project,constructions unique for project,collection of constructions for this project
+#
+*item,high_ins_high_i_mass_extern_wall,extern_wall # tag name menu entry
+*itemdoc,extern_wall  is a ...
+*incat,walls
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,315,0.1000,Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap
+*layer,315,0.1000,Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap
+*layer,315,0.1000,Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap
+*layer,315,0.1000,Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap
+*layer,315,0.1000,Kingspan_OPTIM_R vacuum : Kingspan_OPTIM_R vacuum insulation board - ap
+*layer,264,0.0200,earth (MK) : earth (milton keynes)
+*layer,264,0.0200,earth (MK) : earth (milton keynes)
+*layer,264,0.0200,earth (MK) : earth (milton keynes)
+*layer,264,0.0200,earth (MK) : earth (milton keynes)
+*layer,264,0.0200,earth (MK) : earth (milton keynes)
+*end_item
+*db_end
