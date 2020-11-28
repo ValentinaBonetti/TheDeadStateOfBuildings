@@ -1,9 +1,17 @@
-
-% IEEES 2020 conference format checklist:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IEEES 2020 conference FORMAT checklist:
 % - to check!
 % FORMAT: 
 %            - roman numbers for sections, how do I change it?
 %            - fix references parenthesis style (see notes in reference section)
+%
+%
+%
+% CHECKLIST/TODO:
+% - real case graphs data/spikes
+% - heating strategy and setpoint (add power to the graph)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -157,22 +165,35 @@ The study discusses possible system boundaries and ways of defining the building
 %End with a description of the exact question or hypothesis that your paper will address.
 %Also state your motivation for doing your research and what it will contribute to the field.
 
-% Preamble (horrible, write it better)
+%The problem
+Building exergy analysis is an interesting concept, but it is hardly applied or even known in practice. The controversy on the reference state definition, the lack of convincing practical benefits and the complexity of the analysis are possibly the biggest obstacles. In the author's opinion, the main problem is the adoption of the varying outdoor ambient conditions as the reference state: the fluctuations, combined with the inertia of the building envelope, make the outdoor environment not as directly available as claimed. One consequent issue is a misleading definition of ``warm" and ``cool" exergy, based on the variable outdoor temperature but treated as if they could be used for indoor heating or cooling - for instance in \cite{Choi2020} (left colum of page 11), where energy stored at TOT degrees is proposed as cool exergy usable for indoor cooling and energy stored at TOT degrees is considered as warm exergy and proposed for indoor heating. As already noted in \citep{Bonetti2016} and \citep{Bonetti2017a}, defining warm and cool exergy on the base of outdoor variable conditions is not compatible with the common meaning of ``warm" and ``cold" and cannot be directly translated into HVAC operations.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CHECK and write down exact temperatures and write source to the Choi2020 graph
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% complete problem section
+\vskip2cm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%
+
+
+% The idea
 Debating the reference of exergy analysis requires going back to the beginning, and investigating where its requirements originated. 
 % Gibbs
-\cite{Gibbs1873} was the first to combine the first and second law of thermodynamics in one equation \citep{Klein1990}, in his first paper "Graphical methods in the Thermodynamics of Fluids".  The combination of the first and second law of thermodynamics led Gibbs to introduce the concept of ``available energy"; he distinguished two cases: a "body alone", in internal non-equilibrium conditions, and a "body and medium", in non-equilibrium conditions with each other. 
+\cite{Gibbs1873} was the first to combine the first and second law of thermodynamics in one equation \citep{Klein1990}, in his paper "Graphical methods in the Thermodynamics of Fluids".  The combination of the first and second law of thermodynamics led Gibbs to introduce the concept of ``available energy"; he distinguished two cases: a "body alone", in internal non-equilibrium conditions, and a "body and medium", in non-equilibrium conditions with each other. 
 
 In the case of the ``body alone", the available energy of the body is the greatest amount of mechanical work that ideally can be obtained by taking the body, without any net contributions of energy from external objects, from its initial non-equilibrium condition to the point of stable or neutral equilibrium (on the ``surface of dissipated energy") that has the same entropy and volume of the initial state. The internal non-equilibrium state of the body can assume various forms, like a difference in the pressure of some of its part, or a gradient in temperature, or even different chemical compositions. It is important to observe that the term ``body" refers not necessarily to a single entity but to a system potentially including several subsystems and processes \citep{Gaggioli2012}.
  
-In the case of the ``body and medium", the medium is supposed to be at constant pressure and constant temperature. The medium is also called ``reference environment", a large subsystem that is not affected by the interactions with the other components of the overall system, and it is represented by a plane in Gibbs' graphical representation of the energy-entropy-volume space. The available energy in this case is the distance (on the energy axis) from the point corresponding to the initial conditions of the body to the point on the medium plane with the same entropy and volume. Even if the body is in internal equilibrium, the combination between body and medium can still have available energy, unless they are in the same conditions. 
+In the case of the ``body and medium", the medium is supposed to be at uniform pressure and temperature and it is defined as ``reference environment": a large subsystem that is not affected by the interactions with the other components of the overall system, and is represented by a plane in Gibbs' energy-entropy-volume space. The available energy in this case is the distance (on the energy axis) from the point corresponding to the initial conditions of the body to the point with the same entropy and volume on the reference plane. Even if the body is in internal equilibrium, the combination between body and medium can still have available energy, unless they are in the same conditions. 
 
 
 %Present some of fundamental Gaggioli equations for exergy.
-\cite{Gaggioli2012} provided a definition of the ``dead state" based on Gibbs' ``available energy of a body" (the first case mentioned above)  that does not require a reference environment. 
+The vast majority of exergy analysis is based on the second case, the  ``body and medium", and relies on the definition of a reference environment. However, \cite{Gaggioli2012} provided a definition of the ``dead state" based on Gibbs' ``available energy of a body" (the first case mentioned above)  that does not require a reference environment. 
 
-\vfill \break
+%% report main exergy equations from Gaggioli
 
-\section{The dead state of a very simple building} \label{subsec:simple}
+\section{The dead state of a ``box" building} \label{subsec:simple}
 
 Discuss an insulated cave with no air exchanges and negligible internal gains. Simulate it on the side and present image.
 
@@ -196,25 +217,55 @@ Discuss an insulated cave with no air exchanges and negligible internal gains. S
 \end{figure}
 
 
+\vskip2cm
 
+
+
+
+\section{Internal conditions of realistic cases} \label{subsec:moreComplex}
+
+Statement about the importance of internal loads, not only for summer but also on heating strategies. Define the "core" of the envelope (periodic penetration depth) and specify that it is a first attempt definition.
+Calculate instantaneous dead state and compare with target dead state: $T_{eq}={\sum_i m_i c_i T_i} / {\sum_i m_i c_i}$
+
+%\begin{equation}
+%T_{eq}={\sum_i m_i c_i T_i} / {\sum_i m_i c_i}
+%\end{equation}
+
+
+\begin{figure}[h]
+ 
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.99\linewidth, height=7cm]{images/1.png} 
+\caption{Radiant wall heating}
+\label{fig:esprmodel}
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=0.99\linewidth, height=7cm]{images/2.png}
+\caption{Basic ideal heating (air node heat injection)}
+\label{fig:constructionelements}
+\end{subfigure}
+ 
+\caption{The thermostatic temperature of four different thermal zones of a realistic flat (5-day period in February, UK climate).}
+\label{fig:casestudy}
+\end{figure}
+
+\section{Thermal exergy sensitivity}
+
+Formula of sensitivity and explain the graph:
+
+\begin{equation}
+\sigma =  {Ex(T0+\Delta T0)-Ex(T0) \over Ex(T0)} = { { Q \left( 1-{T0+ \Delta T0 \over T} \right) } - { Q \left( 1-{T0 \over T} \right) } \over { Q \left( 1-{T0 \over T} \right) } } = { \Delta T0 \over T0 - T }
+\end{equation}
+
+\begin{figure}[h]
+ 
+\includegraphics[height=8.5cm, center]{images/sensitivity.png} 
+
+\caption{The first case study: a box model with 500 mm of exterior  insulation and 300 mm of earth on the internal layers.}
+\label{fig:casestudy}
+\end{figure}
 
 \vskip3cm
-
-
-\vfill \break
-
-
-\section{A more realistic case} \label{subsec:moreComplex}
-
-Statement about the importance of internal loads, not only for summer but also on heating strategies. 
-Include window and internal gains. Simulate on the side and present image. Still very good insulation.
-Also present increasingly complex cases, with air exchanges and lower insulation, mainly visually.
-Define the "core" of the envelope (periodic penetration depth) and specify that it is a first attempt definition.
-
-{\bf Calculate instantaneous dead state and compare with target dead state. Do a sensitivity analysis of typical quantities involved.}
-
-\vskip3cm
-
 
 \section{Dead state and design goals}
 
