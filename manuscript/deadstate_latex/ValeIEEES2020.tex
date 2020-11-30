@@ -1,14 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% IEEES 2020 conference FORMAT checklist:
-% - to check!
-% FORMAT: 
-%            - roman numbers for sections, how do I change it?
-%            - is it figure, of Figure, or Fig., or...? Check
-%            - fix references data and parenthesis style (see notes in reference section)
-%
-%
 %
 % CHECKLIST/TODO:
+% - From reviewer: Please revise the abstract by some numerical findings as well.
 % - Figure 1, add wall layers info and improve graphics
 % - real case graphs data/spikes
 % - heating strategy and setpoint (add power to the graph)
@@ -41,8 +34,14 @@
 %\usepackage[pass,showframe]{geometry}
 \usepackage{amsmath}
 \usepackage[english]{babel}
+
 % author year bibliography  
 \usepackage{natbib}
+%\bibliographystyle{vancouver}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\renewcommand\harvardyearleft{\unskip, }
+\renewcommand\harvardyearright[1]{.}
 
 % Use of [T1]{fontenc}
 % If you don't use \usepackage[T1]{fontenc}:
@@ -91,6 +90,13 @@
 %% https://tex.stackexchange.com/questions/326331/titleformat-problem
 
 
+%% Roman section numbering:
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+
+%% Fig. instead of Figure in figure captions:
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+
 %title format:-----------------------
 \usepackage{titling} % make titling elements \sffamily
 \pretitle{\begin{center}\sffamily\bigsize\textbf}
@@ -111,8 +117,7 @@
 
 % ------------------------------------
 
-%\bibliographystyle{vancouver}
-\bibliographystyle{plainnat}
+
 
 \title{Comfort as the dead state of buildings: a preliminary discussion.}
 \author{Valentina Bonetti\\ University of Strathclyde, Department of Mechanical and Aerospace Engineering, 75 Montrose St, Glasgow, G1 1XJ,  UK\\ \\ E-mail: valentina.bonetti@strath.ac.uk}
@@ -175,7 +180,7 @@ The main idea of this study is that building exergy analysis can be based on Gib
 
 \section{The dead state of a ``box" building} \label{subsec:simple}
 
-Gibbs' ``body alone" was a closed and isolated system (although Gaggioli mentioned the possibility of having an open system \citep{Gaggioli1961}, where the dead state might vary). The closest real system which could be considered closed and isolated is a building with external high insulation, no openings and no internal loads, like the one in figure \ref{fig:esprmodel}, modelled with ESP-r for the UK climate. The outdoor has very low impact on its indoor conditions: considering system boundaries that include the envelope inner layers and the indoor air, thermostatic conditions (that can adopted as ``dead state") are reached after a short heating intervention, and freely maintained very stable for a long time (4 weeks are represented in figure \ref{fig:constructionelements}). Model and data are available at \cite{Bonetti2020}.
+Gibbs' ``body alone" was a closed and isolated system (although Gaggioli mentioned the possibility of having an open system \citep{Gaggioli1961}, where the dead state might vary). The closest real system which could be considered closed and isolated is a building with external high insulation, no openings and no internal loads, like the one in Fig. \ref{fig:esprmodel}, modelled with ESP-r for the UK climate. The outdoor has very low impact on its indoor conditions: considering system boundaries that include the envelope inner layers and the indoor air, thermostatic conditions (that can adopted as ``dead state") are reached after a short heating intervention, and freely maintained very stable for a long time (4 weeks are represented in Fig. \ref{fig:constructionelements}). Model and data are available at \cite{Bonetti2020}.
 
  
 \begin{figure}[h]
@@ -203,7 +208,7 @@ Gibbs' ``body alone" was a closed and isolated system (although Gaggioli mention
 
 Real buildings, especially in case of low performances, are not closed and isolated because of transmission losses, internal loads, solar gains, air exchanges. Consequently, the system constituted by the inner envelope layers and indoor air has a variable thermostatic state (the point at which all the subsystems are in equilibrium). However, the internal variations are much more limited than the outdoor air fluctuation, particularly for good envelopes; it is interesting to calculate the thermostatic state of real buildings for different zones and control strategies. 
 
-In this brief article, the case in Figure \ref{fig:casestudy} is considered sufficient to illustrate the point (model and data available from \cite{Bonetti2020}). The system boundaries are defined through an approximate estimate of ``periodic penetration depth" of 10 cm (or less, if an insulation layer is encountered) as suggested by the Standard DIN 4108. Different control strategies impact significantly. The thermostatic temperature $T_{eq}$ comes from the system energy balance: 
+In this brief article, the case in Fig. \ref{fig:casestudy} is considered sufficient to illustrate the point (model and data available from \cite{Bonetti2020}). The system boundaries are defined through an approximate estimate of ``periodic penetration depth" of 10 cm (or less, if an insulation layer is encountered) as suggested by the Standard DIN 4108. Different control strategies impact significantly. The thermostatic temperature $T_{eq}$ comes from the system energy balance: 
 
 $T_{eq}(t)={\sum_i m_i c_i T_i(t)} / {\sum_i m_i c_i}$  \quad  (where $i$ = subsystem, $m$ = mass, $c$ = specific heat, $t$ = hourly timestep).
 
@@ -267,7 +272,7 @@ $T_{eq}(t)={\sum_i m_i c_i T_i(t)} / {\sum_i m_i c_i}$  \quad  (where $i$ = subs
 \vfill \break
 
 
-\noindent Figure \ref{fig:sensitivity} shows that, if the reference temperatures variation remains within $\pm 0.5^\circ C$, exergy values are fairly accurate even for temperatures quite close to the reference ($\pm 10 \%$ around $15^\circ C$ and $25^\circ C$). For relatively large variations ($\pm 4^\circ C$), only exergies at temperatures under $4^\circ C$ or over $36^\circ C$ remain reasonably accurate ($\pm 25 \%$). The acceptance criteria depends on the aim of the analysis and should be investigated more in depth case by case. 
+\noindent Fig. \ref{fig:sensitivity} shows that, if the reference temperatures variation remains within $\pm 0.5^\circ C$, exergy values are fairly accurate even for temperatures quite close to the reference ($\pm 10 \%$ around $15^\circ C$ and $25^\circ C$). For relatively large variations ($\pm 4^\circ C$), only exergies at temperatures under $4^\circ C$ or over $36^\circ C$ remain reasonably accurate ($\pm 25 \%$). The acceptance criteria depends on the aim of the analysis and should be investigated more in depth case by case. 
 %%%%%%%%%%%%%%%
 
 \section{Discussion: dead state and comfort targets} 
