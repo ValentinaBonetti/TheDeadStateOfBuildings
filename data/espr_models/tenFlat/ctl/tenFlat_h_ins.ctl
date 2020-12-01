@@ -12,7 +12,7 @@
      5  # No. of periods in day: weekdays    
     0    1   0.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1500.000 0.000 0.000 0.000 17.500 45.000 0.000
+  1500.000 0.000 0.000 0.000 21.000 45.000 0.000
     0    2   6.000  # ctl type, law (free floating), start @
       0.  # No. of data items
     0    2   8.000  # ctl type, law (free floating), start @
@@ -21,7 +21,7 @@
       0.  # No. of data items
     0    1  21.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1500.000 0.000 0.000 0.000 17.500 45.000 0.000
+  1500.000 0.000 0.000 0.000 21.000 45.000 0.000
 * Control function    2
 # senses temp at Wall-10 in livingroom.
     2    9    0    0  # sensor data
@@ -32,7 +32,7 @@
      5  # No. of periods in day: weekdays    
     0    1   0.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1990.000 0.000 1000.000 0.000 17.500 45.000 0.000
+  1990.000 0.000 1000.000 0.000 21.000 45.000 0.000
     0    2   6.000  # ctl type, law (free floating), start @
       0.  # No. of data items
     0    2   8.000  # ctl type, law (free floating), start @
@@ -41,7 +41,7 @@
       0.  # No. of data items
     0    1  20.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1990.000 0.000 1000.000 0.000 17.500 45.000 0.000
+  1990.000 0.000 1000.000 0.000 21.000 45.000 0.000
 * Control function    3
 # senses temp at Wall-1 in bathroom.
     3    1    0    0  # sensor data
@@ -52,7 +52,7 @@
      5  # No. of periods in day: weekdays    
     0    1   0.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  500.000 0.000 0.000 0.000 17.500 45.000 0.000
+  500.000 0.000 0.000 0.000 21.000 45.000 0.000
     0    2   6.000  # ctl type, law (free floating), start @
       0.  # No. of data items
     0    2   8.000  # ctl type, law (free floating), start @
@@ -89,18 +89,18 @@
      5  # No. of periods in day: weekdays    
     0    1   0.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1125.000 0.000 1000.000 0.000 17.000 45.000 0.000
+  1125.000 0.000 1000.000 0.000 21.000 45.000 0.000
     0    1   6.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1125.000 0.000 1000.000 0.000 17.000 45.000 0.000
+  1125.000 0.000 1000.000 0.000 21.000 45.000 0.000
     0    2   8.000  # ctl type, law (free floating), start @
       0.  # No. of data items
     0    1  18.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1125.000 0.000 1000.000 0.000 17.000 45.000 0.000
+  1125.000 0.000 1000.000 0.000 21.000 45.000 0.000
     0    1  21.000  # ctl type, law (basic control), start @
       7.  # No. of data items
-  1125.000 0.000 1000.000 0.000 17.000 45.000 0.000
+  1125.000 0.000 1000.000 0.000 21.000 45.000 0.000
 * Control function    6
 # senses the temperature of the current zone.
     0    0    0    0  # sensor data

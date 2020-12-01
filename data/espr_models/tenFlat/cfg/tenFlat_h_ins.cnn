@@ -1,5 +1,5 @@
 *connections for tenFlat_h_ins
-*Date Sun Feb 24 16:44:48 2019
+*Date Tue Dec  1 11:13:49 2020
      65   # number of connections
    1   1   0   0   0  #    1 Wall-1 in bedroom is External
    1   2   2  10   0  #    2 Wall-2 in bedroom >|< Constant @ 10 dC &   0 W rad
