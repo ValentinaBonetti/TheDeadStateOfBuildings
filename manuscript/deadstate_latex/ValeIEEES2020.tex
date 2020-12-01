@@ -3,8 +3,6 @@
 % CHECKLIST/TODO:
 % - From reviewer: Please revise the abstract by some numerical findings as well.
 % - Figure 1, add wall layers info and improve graphics
-% - real case graphs data/spikes
-% - heating strategy and setpoint (add power to the graph)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -218,13 +216,15 @@ $T_{eq}(t)={\sum_i m_i c_i T_i(t)} / {\sum_i m_i c_i}$  \quad  (where $i$ = subs
 \begin{figure}[h]
  
 \begin{subfigure}{0.5\textwidth}
-\includegraphics[width=0.99\linewidth, height=7cm]{images/1.png} 
-\caption{Radiant wall heating}
+\includegraphics[width=0.99\linewidth, height=7cm]{images/1.png}
+\vskip-0.1cm 
+\caption{Radiant wall heating, set-point 21$^\circ C$ at night-time (9pm-6am)}
 \label{fig:esprmodel}
 \end{subfigure}
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=0.99\linewidth, height=7cm]{images/2.png}
-\caption{Basic ideal heating (air node heat injection)}
+\vskip-0.1cm 
+\caption{Basic air ideal heating, set-point 22$^\circ C$ (6am-8am + 6pm-10pm)}
 \label{fig:constructionelements}
 \end{subfigure}
  \vskip-0.2cm
@@ -236,26 +236,6 @@ $T_{eq}(t)={\sum_i m_i c_i T_i(t)} / {\sum_i m_i c_i}$  \quad  (where $i$ = subs
 
 \cite{Rosen2004} introduced the sensitivity $\sigma$, a measure of how exergy is impacted by variations in the reference state. In the case of thermal exergy, if heat $Q$ is exchanged at $T$ with a reference $T_0$ that varies by $\Delta T_0$: 
 
-
-%\begin{minipage}{0.55\textwidth}
-%\includegraphics[height=7cm,right]{images/sensitivity.png}
-%\end{minipage}%%% to prevent a space
-%\begin{minipage}{0.4\textwidth}
-%\scriptsize
-%\begin{equation}
-%\begin{split}
-%\sigma &= {Ex(T0+\Delta T0)-Ex(T0) \over Ex(T0)} = \\
-%&= { { Q \left( 1-{T0+ \Delta T0 \over T} \right) } - { Q \left( 1-{T0 \over T} \right) } \over { Q \left( 1-{T0 \over T} \right) } } = \\
-%&= { \Delta T0 \over T0 - T }\\
-%\end{split}
-%\end{equation}
-%\null
-%\par\xdef\tpd{\the\prevdepth}
-%\end{minipage}
-
-%%%%%%%%%%%%%%%
-
-%Alternative: equation on top of figure:
 
 \vskip-0.1cm
 \begin{equation}
