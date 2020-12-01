@@ -1,0 +1,834 @@
+Synopsis
+ 
+Synopsis of the model tenement flat: one-bedroom 3rd (last) floor. Hall zone
+added from living defined in tenFlat_h_ins.cfg generated on Sun Feb  3
+11:18:36 2019. Associated notes are in ../doc/tenFlat.log
+ 
+The model is located at latitude   55.90 with a longitude difference of  -4.10
+from the local time meridian (east +ve). The year used in simulations is 1982
+and weekends occur on Saturday and Sunday.
+ 
+The site exposure is typical city centre and the ground reflectance is 0.20.
+ 
+ 
+Simulationist name: not yet defined
+Simulationist telephone: not yet defined
+Simulationist address: not yet defined
+Simulationist city: not yet defined
+Simulationist postcode: not yet defined
+ 
+The climate is: Glasgow Wea Center SCT GBR and is held in: Glasgow_TMYx with
+hour centred solar data.
+ standard annual weather: Glasgow_TMYx
+Calculated ground temp at 0.5m depth
+4.4342 3.9370 4.8189 6.1988 9.8084 12.594 14.473 15.045 14.070 11.908 9.0175 6.3359
+Calculated ground temp at 1.0m depth
+5.1137 4.4324 5.0273 6.1568 9.3307 11.921 13.789 14.536 13.879 12.075 9.5083 7.0105
+Calculated ground temp at 2.0m depth
+6.2638 5.3779 5.5587 6.2918 8.7070 10.890 12.637 13.574 13.374 12.148 10.157 8.0454
+Calculated ground temp at 4.0m depth
+7.7783 6.8697 6.6711 6.9459 8.3130 9.7840 11.132 12.071 12.291 11.759 10.590 9.1613
+ 
+An Integrated Performance View is incomplete or missing.
+ 
+Databases associated with the model:
+ standard pressure distr: pressc.db1
+ materials              : ../dbs/tenFlat.materialdb
+ constructions          : ../dbs/tenFlat.constrdb
+ standard plant comp    : plantc.db1
+ standard event profiles: profiles.db2.a
+ standard optical prop  : optics.db2
+ standard UK NCM data   : SBEM.db1
+ standard predefined obj: predefined.db1
+ standard mould isopleth: mould.db1
+ 
+ ____________________________________________________________
+ 
+The model includes ideal controls as follows:
+Control description:
+1 bedroom, 2 livingroom, 3 bathroom, 4 loft, 5 hall -> livingroom
+ 
+Zones control includes  7 functions.
+nocturnal wall heat storage
+Details of control loops referenced in the model:
+ 
+ The sensor for function  1 senses temp at Wall-2 in bedroom.
+ The actuator for function  1 is within Wall-2 in bedroom.
+ >  1 periods of validity during the year have been defined.
+ Control is valid Fri-01-Jan to Fri-31-Dec, 1982 with  5 periods.
+ Per|Start|Sensing  |Actuating  | Control law description
+   1  0.00 db temp   > flux      basic control: max heating capacity 1755.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+   2  3.00 db temp   > flux      free floating
+   3  8.00 db temp   > flux      free floating
+   4 18.00 db temp   > flux      free floating
+   5 21.00 db temp   > flux      basic control: max heating capacity 1755.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+ 
+ The sensor for function  2 senses temp at Wall-10 in livingroom.
+ The actuator for function  2 is within Wall-10 in livingroom.
+ >  1 periods of validity during the year have been defined.
+ Control is valid Fri-01-Jan to Fri-31-Dec, 1982 with  5 periods.
+ Per|Start|Sensing  |Actuating  | Control law description
+   1  0.00 db temp   > flux      basic control: max heating capacity 2985.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+   2  6.00 db temp   > flux      free floating
+   3  8.00 db temp   > flux      free floating
+   4 18.00 db temp   > flux      free floating
+   5 21.00 db temp   > flux      basic control: max heating capacity 2985.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+ 
+ The sensor for function  3 senses the temperature of the current zone.
+ The actuator for function  3 is mixed convective/radiant flux in bathroom.
+ >  1 periods of validity during the year have been defined.
+ Control is valid Fri-01-Jan to Fri-31-Dec, 1982 with  5 periods.
+ Per|Start|Sensing  |Actuating  | Control law description
+   1  0.00 db temp   > flux      basic control: max heating capacity 1500.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+18.00C cooling setpoint 45.00C.
+   2  6.00 db temp   > flux      basic control: max heating capacity 1500.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+20.00C cooling setpoint 24.00C.
+   3  8.00 db temp   > flux      free floating
+   4 18.00 db temp   > flux      basic control: max heating capacity 1500.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+20.00C cooling setpoint 45.00C.
+   5 21.00 db temp   > flux      basic control: max heating capacity 1500.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+18.00C cooling setpoint 45.00C.
+ 
+ The sensor for function  4 senses the temperature of the current zone.
+ The actuator for function  4 is air point of the current zone
+ >  1 periods of validity during the year have been defined.
+ Control is valid Fri-01-Jan to Fri-31-Dec, 1982 with  5 periods.
+ Per|Start|Sensing  |Actuating  | Control law description
+   1  0.00 db temp   > flux      free floating
+   2  6.00 db temp   > flux      free floating
+   3  8.00 db temp   > flux      free floating
+   4 18.00 db temp   > flux      free floating
+   5 21.00 db temp   > flux      free floating
+ 
+ The sensor for function  5 senses temp within storage_wall in hall.
+ The actuator for function  5 is within storage_wall in hall.
+ >  1 periods of validity during the year have been defined.
+ Control is valid Fri-01-Jan to Fri-31-Dec, 1982 with  5 periods.
+ Per|Start|Sensing  |Actuating  | Control law description
+   1  0.00 db temp   > flux      basic control: max heating capacity 1125.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+   2  6.00 db temp   > flux      basic control: max heating capacity 1125.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+   3  8.00 db temp   > flux      free floating
+   4 18.00 db temp   > flux      basic control: max heating capacity 1125.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+   5 21.00 db temp   > flux      basic control: max heating capacity 1125.0W min heating
+capacity 0.0W max cooling capacity 1000.0W min cooling capacity 0.0W. Heating setpoint
+22.00C cooling setpoint 45.00C.
+ 
+ Zone to contol loop linkages:
+ zone ( 1) bedroom      << control  1
+ zone ( 2) livingroom   << control  2
+ zone ( 3) bathroom     << control  3
+ zone ( 4) loft         << control  4
+ zone ( 5) hall         << control  5
+ 
+ ____________________________________________________________
+ 
+ID Zone         Volume|          Surface
+   Name         m^3   | No. Opaque  Transp  ~Floor
+ 1 bedroom        34.2   9    64.0     0.0    11.8  bedroom
+ 2 livingroom     67.1  17   111.0     0.0    23.1  livingroom
+ 3 bathroom        7.3  10    25.0     0.0     2.5  bathroom
+ 4 loft           46.3  19   115.3     0.0    40.3  loft describes a free-floating space under the roof
+ 5 hall            8.2  10    26.7     0.0     2.8  hall
+   all           163.   65    342.      0.     81.
+ 
+ 
+ Zone bedroom ( 1) is composed of 9 surfaces and 18 vertices.
+ It encloses a volume of 34.2m^3 of space, with a total surface
+ area of 64.0m^2 & approx floor area of 11.8m^2
+ bedroom
+ There is 8.4680m2 of exposed surface area, 8.4680m2 of which is vertical.
+ Facade opaque is 8.4680m2 & 71.763 % of floor area & average U of 1.376 & UA of 11.648
+ Opaque partitions:ceiling:floor 20.265m2 & trasparent partitions:ceiling:floor 0.00m2.
+ 
+ A summary of the surfaces in bedroom( 1) follows:
+ 
+ Sur| Area  |Azim|Elev| surface    |    geometry                  | construction |environment
+    | m^2   |deg |deg | name       |optical|locat| use            | name         |other side
+  1  6.22      0.   0. Wall-1       OPAQUE   VERT -        -        extern_wall_ins ||< external
+  2  11.7    270.   0. Wall-2       OPAQUE   VERT -        -        int_wall_3bricks_extinsul ||< constant @ 10dC &   0W rad
+  3  1.59    180.   0. Wall-3       OPAQUE   VERT -        -        int_part_plast ||< Wall-20:hall
+  4  11.7     90.   0. Wall-4       OPAQUE   VERT -        -        internal_wall_3bricks_ins ||< constant @ 20dC &   0W rad
+  5  11.8      0.  90. Top-5        OPAQUE   CEIL -        -        ten_ceiling ||< Top-5:loft
+  6  11.8      0. -90. Base-6       OPAQUE   FLOR -        -        ten_floor_ins ||< constant @ 20dC &   0W rad
+  7  2.25      0.   0. window_north OPAQUE   VERT FICT     CLOSED   double_glz ||< external
+  8  1.66    180.   0. intern_door  OPAQUE   VERT DOOR     CLOSED   int_door ||< int_door:hall
+  9  5.22    180.   0. Wall-5       OPAQUE   VERT -        -        int_part_plast ||< Wall-1:livingroom
+ 
+ 
+ All surfaces will receive diffuse insolation (if shading not calculated).
+ No shading analysis requested.
+ No insolation analysis requested.
+ 
+Surface Top-5 has a nonsymmetric construction ten_ceiling.
+It faces Top-5        which is composed of ten_ceiling (which may not match).
+ 
+ Air schedule notes:
+Infiltration 0.5 ACH 24/7. imposed on air movement.
+ Control: no control of air flow
+ 
+Scheduled air infiltration and ventilation:
+Daytype    Period     Infiltration     Ventilation     From Source
+           id Hours   Rate ac/h m3/s   Rate ac/h m3/s  Zone DegC
+weekdays   1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+saturday   1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+sunday     1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+holiday    1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+ 
+Notes:
+Standard bedroom, two occupants.
+ 
+Daytype   Gain Label     Type    Unit Period Sensible  Latent     Radiant    Convec
+          No.                          Hours Magn.(W)  Magn.(W)   Fraction   Fraction
+weekdays    1 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+weekdays    2 Occupt     people    W    0- 7    100.0     50.0       0.60       0.40
+weekdays    3 Occupt     people    W    7-22      0.0      0.0       0.60       0.40
+weekdays    4 Lights     lighting  W    9-18     10.0      0.0       0.30       0.70
+weekdays    5 Lights     lighting  W   18-22     50.0      0.0       0.30       0.70
+weekdays    6 Lights     lighting  W   22-24      0.0      0.0       0.30       0.70
+weekdays    7 Occupt     people    W   22-24    100.0     50.0       0.60       0.40
+weekdays    8 Equipt     equipment W    0-24     64.9      0.0       0.20       0.80
+ 
+saturday    1 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+saturday    2 Occupt     people    W    0- 9    100.0     50.0       0.60       0.40
+saturday    3 Occupt     people    W    9-22      0.0      0.0       0.60       0.40
+saturday    4 Lights     lighting  W    9-18     10.0      0.0       0.30       0.70
+saturday    5 Lights     lighting  W   18-22     50.0      0.0       0.30       0.70
+saturday    6 Lights     lighting  W   22-24      0.0      0.0       0.30       0.70
+saturday    7 Occupt     people    W   22-24    100.0     50.0       0.60       0.40
+saturday    8 Equipt     equipment Wm2  0-24      5.5      0.0       0.20       0.80
+ 
+sunday      1 Lights     lighting  W    0- 9      0.0      0.0       0.30       0.70
+sunday      2 Occupt     people    W    0-10    100.0     50.0       0.60       0.40
+sunday      3 Occupt     people    W   10-22      0.0      0.0       0.60       0.40
+sunday      4 Lights     lighting  W    9-18     10.0      0.0       0.30       0.70
+sunday      5 Lights     lighting  W   18-22     50.0      0.0       0.30       0.70
+sunday      6 Lights     lighting  W   22-24      0.0      0.0       0.30       0.70
+sunday      7 Occupt     people    W   22-24    100.0     50.0       0.60       0.40
+sunday      8 Equipt     equipment Wm2  0-24      5.5      0.0       0.20       0.80
+ 
+holiday     1 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+holiday     2 Occupt     people    W    0- 9    100.0     50.0       0.60       0.40
+holiday     3 Occupt     people    W    9-22      0.0      0.0       0.60       0.40
+holiday     4 Lights     lighting  W    9-18     10.0      0.0       0.30       0.70
+holiday     5 Lights     lighting  W   18-22     50.0      0.0       0.30       0.70
+holiday     6 Lights     lighting  W   22-24      0.0      0.0       0.30       0.70
+holiday     7 Occupt     people    W   22-24    100.0     50.0       0.60       0.40
+holiday     8 Equipt     equipment Wm2  0-24      5.5      0.0       0.20       0.80
+ 
+ 
+ ____________________________________________________________
+ 
+ Zone livingroom ( 2) is composed of 17 surfaces and 38 vertices.
+ It encloses a volume of 67.1m^3 of space, with a total surface
+ area of 111.m^2 & approx floor area of 23.1m^2
+ livingroom
+ There is 13.050m2 of exposed surface area, 13.050m2 of which is vertical.
+ Facade opaque is 13.050m2 & 56.396 % of floor area & average U of 1.576 & UA of 20.569
+ Opaque partitions:ceiling:floor 43.616m2 & trasparent partitions:ceiling:floor 0.00m2.
+ 
+ A summary of the surfaces in livingroom( 2) follows:
+ 
+ Sur| Area  |Azim|Elev| surface    |    geometry                  | construction |environment
+    | m^2   |deg |deg | name       |optical|locat| use            | name         |other side
+  1  5.22      0.   0. Wall-1       OPAQUE   VERT -        -        int_part_plast ||< Wall-5:bedroom
+  2  1.31    270.   0. Wall-3       OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-10:bathroom
+  3  3.42      0.   0. Wall-4       OPAQUE   VERT -        -        int_part_plast ||< Wall-5:bathroom
+  4  11.3    270.   0. Wall-5       OPAQUE   VERT -        -        internal_wall_3bricks_ins ||< constant @ 20dC &   0W rad
+  5  2.14    180.   0. Wall-6       OPAQUE   VERT -        -        extern_wall_ins ||< external
+  6  1.85    217.   0. Wall-7       OPAQUE   VERT -        -        extern_wall_ins ||< external
+  7  2.41    180.   0. Wall-8       OPAQUE   VERT -        -        extern_wall_ins ||< external
+  8  1.85    143.   0. Wall-9       OPAQUE   VERT -        -        extern_wall_ins ||< external
+  9  19.9     90.   0. Wall-10      OPAQUE   VERT -        -        internal_wall_3bricks ||< constant @ 20dC &   0W rad
+ 10  23.1      0.  90. Top-11       OPAQUE   CEIL -        -        ten_ceiling ||< Top-11:loft
+ 11  23.1      0. -90. Base-12      OPAQUE   FLOR -        -        ten_floor_ins ||< constant @ 20dC &   0W rad
+ 12  1.05    180.   0. wind_south_1 OPAQUE   VERT FICT     CLOSED   double_glz ||< external
+ 13  1.05    217.   0. win_south_2_ OPAQUE   VERT FICT     CLOSED   double_glz ||< external
+ 14  1.65    180.   0. win_south_3  OPAQUE   VERT FICT     CLOSED   double_glz ||< external
+ 15  1.05    143.   0. win_south_4  OPAQUE   VERT FICT     CLOSED   double_glz ||< external
+ 16  3.25      0.   0. Wall-25      OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-25:hall
+ 17  7.28    270.   0. storage_wall OPAQUE   VERT -        -        internal_partition_1brick ||< storage_wall:hall
+ 
+ 
+ All surfaces will receive diffuse insolation (if shading not calculated).
+ No shading analysis requested.
+ No insolation analysis requested.
+ 
+Surface Top-11 has a nonsymmetric construction ten_ceiling.
+It faces Top-11       which is composed of ten_ceiling (which may not match).
+ 
+ Air schedule notes:
+Infiltration 0.5 ACH imposed 24/7.
+ Control: no control of air flow
+ 
+Scheduled air infiltration and ventilation:
+Daytype    Period     Infiltration     Ventilation     From Source
+           id Hours   Rate ac/h m3/s   Rate ac/h m3/s  Zone DegC
+weekdays   1  0 - 24    0.50  0.0093    0.00  0.0000   0     0.00
+saturday   1  0 - 24    0.50  0.0093    0.00  0.0000   0     0.00
+sunday     1  0 - 24    0.50  0.0093    0.00  0.0000   0     0.00
+holiday    1  0 - 24    0.50  0.0093    0.00  0.0000   0     0.00
+ 
+Notes:
+Two occupants, minimal lights and small power.
+ 
+Daytype   Gain Label     Type    Unit Period Sensible  Latent     Radiant    Convec
+          No.                          Hours Magn.(W)  Magn.(W)   Fraction   Fraction
+weekdays    1 Occupants  people    W    0- 9    100.0     50.0       0.60       0.40
+weekdays    2 Occupants  people    W    9-17      0.0      0.0       0.60       0.40
+weekdays    3 Occupants  people    W   17-20    200.0    100.0       0.60       0.40
+weekdays    4 Occupants  people    W   20-24    100.0     50.0       0.60       0.40
+weekdays    5 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+weekdays    6 Lights     lighting  W    7- 9     50.0      0.0       0.30       0.70
+weekdays    7 Lights     lighting  W    9-18      0.0      0.0       0.00       0.50
+weekdays    8 Lights     lighting  W   18-20    100.0      0.0       0.30       0.70
+weekdays    9 Lights     lighting  W   20-23     30.0      0.0       0.00       0.50
+weekdays   10 Lights     lighting  W   23-24      0.0      0.0       0.00       0.50
+weekdays   11 SmallPower equipment W    0-24     60.0      0.0       0.50       0.60
+ 
+saturday    1 Occupants  people    W    0- 9    100.0     50.0       0.60       0.40
+saturday    2 Occupants  people    W    9-17    200.0    100.0       0.60       0.40
+saturday    3 Occupants  people    W   17-20    200.0    100.0       0.60       0.40
+saturday    4 Occupants  people    W   20-24    100.0     50.0       0.60       0.40
+saturday    5 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+saturday    6 Lights     lighting  W    7- 9     50.0      0.0       0.30       0.70
+saturday    7 Lights     lighting  W    9-18      0.0      0.0       0.00       0.50
+saturday    8 Lights     lighting  W   18-20    100.0      0.0       0.30       0.70
+saturday    9 Lights     lighting  W   20-23     30.0      0.0       0.00       0.50
+saturday   10 Lights     lighting  W   23-24      0.0      0.0       0.00       0.50
+saturday   11 SmallPower equipment W    0-24     60.0      0.0       0.50       0.60
+ 
+sunday      1 Occupants  people    W    0- 9    100.0     50.0       0.60       0.40
+sunday      2 Occupants  people    W    9-17     50.0     25.0       0.60       0.40
+sunday      3 Occupants  people    W   17-20    200.0    100.0       0.60       0.40
+sunday      4 Occupants  people    W   20-24    100.0     50.0       0.60       0.40
+sunday      5 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+sunday      6 Lights     lighting  W    7- 9     50.0      0.0       0.30       0.70
+sunday      7 Lights     lighting  W    9-18      0.0      0.0       0.00       0.50
+sunday      8 Lights     lighting  W   18-20    100.0      0.0       0.30       0.70
+sunday      9 Lights     lighting  W   20-23     30.0      0.0       0.00       0.50
+sunday     10 Lights     lighting  W   23-24      0.0      0.0       0.00       0.50
+sunday     11 SmallPower equipment W    0-24     60.0      0.0       0.50       0.60
+ 
+holiday     1 Occupants  people    W    0- 9    100.0     50.0       0.60       0.40
+holiday     2 Occupants  people    W    9-17      0.0      0.0       0.60       0.40
+holiday     3 Occupants  people    W   17-20    200.0    100.0       0.60       0.40
+holiday     4 Occupants  people    W   20-24    100.0     50.0       0.60       0.40
+holiday     5 Lights     lighting  W    0- 7      0.0      0.0       0.30       0.70
+holiday     6 Lights     lighting  W    7- 9     50.0      0.0       0.30       0.70
+holiday     7 Lights     lighting  W    9-18      0.0      0.0       0.00       0.50
+holiday     8 Lights     lighting  W   18-20    100.0      0.0       0.30       0.70
+holiday     9 Lights     lighting  W   20-23     30.0      0.0       0.00       0.50
+holiday    10 Lights     lighting  W   23-24      0.0      0.0       0.00       0.50
+holiday    11 SmallPower equipment W    0-24     60.0      0.0       0.50       0.60
+ 
+ 
+ ____________________________________________________________
+ 
+ Zone bathroom ( 3) is composed of 10 surfaces and 18 vertices.
+ It encloses a volume of 7.32m^3 of space, with a total surface
+ area of 25.0m^2 & approx floor area of 2.52m^2
+ bathroom
+ Opaque partitions:ceiling:floor 10.179m2 & trasparent partitions:ceiling:floor 0.00m2.
+ 
+ A summary of the surfaces in bathroom( 3) follows:
+ 
+ Sur| Area  |Azim|Elev| surface    |    geometry                  | construction |environment
+    | m^2   |deg |deg | name       |optical|locat| use            | name         |other side
+  1  5.74      0.   0. Wall-1       OPAQUE   VERT -        -        internal_wall_3bricks ||< constant @ 10dC &   0W rad
+  2  2.90    270.   0. Wall-2       OPAQUE   VERT -        -        internal_wall_3bricks ||< constant @ 20dC &   0W rad
+  3  2.32    180.   0. Wall-3       OPAQUE   VERT -        -        internal_wall_3bricks ||< constant @ 20dC &   0W rad
+  4  1.33    270.   0. Wall-4       OPAQUE   VERT -        -        internal_wall_3bricks ||< constant @ 20dC &   0W rad
+  5  3.42    180.   0. Wall-5       OPAQUE   VERT -        -        int_part_plast ||< Wall-4:livingroom
+  6  1.46     90.   0. Wall-6       OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-6:hall
+  7  2.52      0.  90. Top-7        OPAQUE   CEIL -        -        ten_ceiling ||< Top-7:loft
+  8  2.52      0. -90. Base-8       OPAQUE   FLOR -        -        ten_floor_ins ||< constant @ 20dC &   0W rad
+  9  1.47     90.   0. bath_door    OPAQUE   VERT DOOR     CLOSED   int_door ||< bath_door:hall
+ 10  1.31     90.   0. Wall-10      OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-3:livingroom
+ 
+ 
+ All surfaces will receive diffuse insolation (if shading not calculated).
+ No shading analysis requested.
+ No insolation analysis requested.
+ 
+Surface Top-7 has a nonsymmetric construction ten_ceiling.
+It faces Top-7        which is composed of ten_ceiling (which may not match).
+ 
+ Air schedule notes:
+Infiltration 0.1 ACH 24/7. imposed on air movement.
+ Control: no control of air flow
+ 
+Scheduled air infiltration and ventilation:
+Daytype    Period     Infiltration     Ventilation     From Source
+           id Hours   Rate ac/h m3/s   Rate ac/h m3/s  Zone DegC
+weekdays   1  0 - 24    0.10  0.0002    0.00  0.0000   0     0.00
+saturday   1  0 - 24    0.10  0.0002    0.00  0.0000   0     0.00
+sunday     1  0 - 24    0.10  0.0002    0.00  0.0000   0     0.00
+holiday    1  0 - 24    0.10  0.0002    0.00  0.0000   0     0.00
+ 
+Notes:
+Bathroom with shower. Initial period of 0-24 hour for each.
+ 
+Daytype   Gain Label     Type    Unit Period Sensible  Latent     Radiant    Convec
+          No.                          Hours Magn.(W)  Magn.(W)   Fraction   Fraction
+weekdays    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+weekdays    2 Lights     lighting  W    0-24     10.0      0.0       0.30       0.70
+weekdays    3 SmallPower equipment W    0-24     10.0      0.0       0.40       0.60
+weekdays    4                      W    0- 7      0.0      0.0       0.60       0.40
+weekdays    5                      W    7- 9      0.0    100.0       0.60       0.40
+weekdays    6                      W    9-24      0.0      0.0       0.60       0.40
+ 
+saturday    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+saturday    2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+saturday    3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+saturday    4                      W    0- 7      0.0      0.0       0.60       0.40
+saturday    5                      W    7- 9      0.0    100.0       0.60       0.40
+saturday    6                      W    9-24      0.0      0.0       0.60       0.40
+ 
+sunday      1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+sunday      2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+sunday      3                      W    0- 7      0.0      0.0       0.60       0.40
+sunday      4 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+sunday      5                      W    7- 9      0.0    100.0       0.60       0.40
+sunday      6                      W    9-24      0.0      0.0       0.60       0.40
+ 
+holiday     1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+holiday     2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+holiday     3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+holiday     4                      W    0- 7      0.0      0.0       0.60       0.40
+holiday     5                      W    7- 9      0.0    100.0       0.60       0.40
+holiday     6                      W    9-24      0.0      0.0       0.60       0.40
+ 
+ 
+ ____________________________________________________________
+ 
+ Zone loft ( 4) is composed of 19 surfaces and 31 vertices.
+ It encloses a volume of 46.3m^3 of space, with a total surface
+ area of 115.m^2 & approx floor area of 40.3m^2
+ loft describes a free-floating space under the roof
+ There is 44.063m2 of exposed surface area, 1.4840m2 of which is vertical.
+ Facade opaque is 1.4840m2 & 3.6851 % of floor area & average U of 1.147 & UA of 1.7022
+ Sloped roof is 102.46 % of floor area & average U of 2.265 & UA of 93.449
+ Flat roof is 3.2779 % of floor area & average U of 2.265 & UA of 2.9897
+ Opaque partitions:ceiling:floor 40.273m2 & trasparent partitions:ceiling:floor 0.00m2.
+ 
+ A summary of the surfaces in loft( 4) follows:
+ 
+ Sur| Area  |Azim|Elev| surface    |    geometry                  | construction |environment
+    | m^2   |deg |deg | name       |optical|locat| use            | name         |other side
+  1  0.584     0.   0. Wall-1       OPAQUE   VERT -        -        extern_wall ||< external
+  2  6.37    270.   0. Wall-2       OPAQUE   VERT -        -        internal_partition_1brick ||< adiabatic
+  3  4.16      0.   0. Wall-3       OPAQUE   VERT -        -        internal_partition_1brick ||< adiabatic
+  4  1.95    270.   0. Wall-4       OPAQUE   VERT -        -        internal_partition_1brick ||< adiabatic
+  5  1.44    180.   0. Wall-5       OPAQUE   VERT -        -        internal_partition_1brick ||< adiabatic
+  6  4.36    270.  -0. Wall-6       OPAQUE   VERT -        -        internal_partition_1brick ||< adiabatic
+  7  0.220   180.   0. Wall-7       OPAQUE   VERT -        -        extern_wall ||< external
+  8  0.200   217.   0. Wall-8       OPAQUE   VERT -        -        extern_wall ||< external
+  9  0.280   180.   0. Wall-9       OPAQUE   VERT -        -        extern_wall ||< external
+ 10  0.200   143.   0. Wall-10      OPAQUE   VERT -        -        extern_wall ||< external
+ 11  12.7     90.   0. Wall-11      OPAQUE   VERT -        -        internal_wall_3bricks ||< identical environment
+ 12  17.1      0.  71. Top-12       OPAQUE   SLOP -        -        tile_roof ||< external
+ 13  11.8      0. -90. Top-5        OPAQUE   FLOR -        -        ten_ceiling ||< Top-5:bedroom
+ 14  2.52      0. -90. Top-7        OPAQUE   FLOR -        -        ten_ceiling ||< Top-7:bathroom
+ 15  5.12    180.  73. Top-16       OPAQUE   SLOP -        -        tile_roof ||< external
+ 16  19.0    180.  70. Top-17       OPAQUE   SLOP -        -        tile_roof ||< external
+ 17  1.32      0.  90. Top-18       OPAQUE   CEIL -        -        tile_roof ||< external
+ 18  23.1      0. -90. Top-11       OPAQUE   FLOR -        -        ten_ceiling ||< Top-11:livingroom
+ 19  2.81      0. -90. Top-22       OPAQUE   FLOR -        -        ten_ceiling ||< Top-22:hall
+ 
+ 
+ All surfaces will receive diffuse insolation (if shading not calculated).
+ No shading analysis requested.
+ No insolation analysis requested.
+ 
+Surface Top-5 has a nonsymmetric construction ten_ceiling.
+It faces Top-5        which is composed of ten_ceiling (which may not match).
+Surface Top-7 has a nonsymmetric construction ten_ceiling.
+It faces Top-7        which is composed of ten_ceiling (which may not match).
+Surface Top-11 has a nonsymmetric construction ten_ceiling.
+It faces Top-11       which is composed of ten_ceiling (which may not match).
+Surface Top-22 has a nonsymmetric construction ten_ceiling.
+It faces Top-22       which is composed of ten_ceiling (which may not match).
+ 
+ Air schedule notes:
+Infiltration 2 ACH 24/7. imposed on air movement.
+ Control: no control of air flow
+ 
+Scheduled air infiltration and ventilation:
+Daytype    Period     Infiltration     Ventilation     From Source
+           id Hours   Rate ac/h m3/s   Rate ac/h m3/s  Zone DegC
+weekdays   1  0 - 24    2.00  0.0257    0.00  0.0000   0     0.00
+saturday   1  0 - 24    2.00  0.0257    0.00  0.0000   0     0.00
+sunday     1  0 - 24    2.00  0.0257    0.00  0.0000   0     0.00
+holiday    1  0 - 24    2.00  0.0257    0.00  0.0000   0     0.00
+ 
+Notes:
+Nothing happens in this zone i.e. no occupants lights and small power.
+Initial period of 0-24 hour for each.
+ 
+Daytype   Gain Label     Type    Unit Period Sensible  Latent     Radiant    Convec
+          No.                          Hours Magn.(W)  Magn.(W)   Fraction   Fraction
+weekdays    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+weekdays    2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+weekdays    3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+saturday    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+saturday    2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+saturday    3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+sunday      1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+sunday      2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+sunday      3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+holiday     1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+holiday     2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+holiday     3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+ 
+ ____________________________________________________________
+ 
+ Zone hall ( 5) is composed of 10 surfaces and 22 vertices.
+ It encloses a volume of 8.15m^3 of space, with a total surface
+ area of 26.7m^2 & approx floor area of 2.81m^2
+ hall
+ Opaque partitions:ceiling:floor 19.515m2 & trasparent partitions:ceiling:floor 0.00m2.
+ 
+ A summary of the surfaces in hall( 5) follows:
+ 
+ Sur| Area  |Azim|Elev| surface    |    geometry                  | construction |environment
+    | m^2   |deg |deg | name       |optical|locat| use            | name         |other side
+  1  1.59      0.   0. Wall-20      OPAQUE   VERT -        -        int_part_plast ||< Wall-3:bedroom
+  2  1.66      0.   0. int_door     OPAQUE   VERT DOOR     CLOSED   int_door ||< intern_door:bedroom
+  3  2.81      0.  90. Top-22       OPAQUE   CEIL -        -        ten_ceiling ||< Top-22:loft
+  4  7.28     90.   0. storage_wall OPAQUE   VERT -        -        internal_partition_1brick ||< storage_wall:livingroom
+  5  2.81      0. -90. Base-21      OPAQUE   FLOR -        -        ten_floor_ins ||< constant @ 20dC &   0W rad
+  6  3.25    180.   0. Wall-25      OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-25:livingroom
+  7  1.47    270.   0. bath_door    OPAQUE   VERT DOOR     CLOSED   int_door ||< bath_door:bathroom
+  8  1.46    270.   0. Wall-6       OPAQUE   VERT -        -        internal_partition_1brick ||< Wall-6:bathroom
+  9  1.70    270.  -0. Wall-2       OPAQUE   VERT -        -        internal_wall_3bricks_ins ||< constant @ 10dC &   0W rad
+ 10  2.65    270.  -0. main_door    OPAQUE   VERT DOOR     CLOSED   main_door ||< constant @ 10dC &   0W rad
+ 
+ 
+ All surfaces will receive diffuse insolation (if shading not calculated).
+ No shading analysis requested.
+ No insolation analysis requested.
+ 
+Surface Top-22 has a nonsymmetric construction ten_ceiling.
+It faces Top-22       which is composed of ten_ceiling (which may not match).
+ 
+ Air schedule notes:
+It has no infiltration or ventilation from other zones and no control
+imposed on air movement.
+ Control: no control of air flow
+ 
+Scheduled air infiltration and ventilation:
+Daytype    Period     Infiltration     Ventilation     From Source
+           id Hours   Rate ac/h m3/s   Rate ac/h m3/s  Zone DegC
+weekdays   1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+saturday   1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+sunday     1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+holiday    1  0 - 24    0.00  0.0000    0.00  0.0000   0     0.00
+ 
+Notes:
+Nothing happens in this zone i.e. no occupants lights and small power.
+Initial period of 0-24 hour for each.
+ 
+Daytype   Gain Label     Type    Unit Period Sensible  Latent     Radiant    Convec
+          No.                          Hours Magn.(W)  Magn.(W)   Fraction   Fraction
+weekdays    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+weekdays    2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+weekdays    3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+saturday    1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+saturday    2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+saturday    3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+sunday      1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+sunday      2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+sunday      3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+holiday     1 Occupants  people    W    0-24      0.0      0.0       0.60       0.40
+holiday     2 Lights     lighting  W    0-24      0.0      0.0       0.30       0.70
+holiday     3 SmallPower equipment W    0-24      0.0      0.0       0.40       0.60
+ 
+ 
+ ____________________________________________________________
+ 
+ Project floor area is 80.540m2, wall area is 23.002m2, window area is 0.00m2.
+ Sloped roof area is 41.259m2, flat roof area is 1.3200m2, skylight area is 0.00m2.
+ In contact with ground 0.00m2.
+ There is 65.581m2 of outside surface area, 23.002m2 of which is vertical.
+ 
+ Outside walls are 28.560 % of floor area & average U of 1.475 & UA of 33.919 & max MLC thickness 0.612
+ Sloped roof is 51.228 % of floor area & average U of 2.265 & UA of 93.449
+ Flat roof is 1.6389 % of floor area & average U of 2.265 & UA of 2.9897
+ 
+ ____________________________________________________________
+ Multi-layer constructions used:
+ 
+ Details of opaque construction: extern_wall and overall thickness  0.600
+ In category general constructions also shown in menus as: tenement external wall
+extern_wall  is a ...
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext   300.0     1.830  2200.   712. 0.90 0.60    29.  0.16 660.0 sandstone : Sandstone
+    2   80.0     0.200  1000.  1000. 0.90 0.70     5.  0.40  80.0 LECA-limecrete : Lightweight expanded clay aggr in limecrete K is about 0.2 (estim
+    3  200.0     1.830  2200.   712. 0.90 0.60    29.  0.11 440.0 sandstone : Sandstone
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  1.147  1.188  1.097 (partition)  1.040
+ Weight per m^2 of this construction1208.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  1.13
+ External surface admittance Y=  5.36  w=  1.04 decrement factor f=  0.42  phi=  1.64 surface factor f=  0.42  phi=  1.64
+ Partition admittance Y=  5.39  w=  0.99 surface factor f=  0.41  phi=  1.59
+ Total area of extern_wall is      1.48
+ 
+ Details of opaque construction: internal_wall_3bricks and overall thickness  0.370
+ In category internals also shown in menus as: tenement int. wall between flats
+no documentation yet for tenement internal wall ingeneral constructions
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+    2  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    3  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    4  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  1.613  1.695  1.515 (partition)  1.408
+ Weight per m^2 of this construction 617.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  1.59
+ External surface admittance Y=  4.61  w=  1.40 decrement factor f=  0.52  phi=  1.49 surface factor f=  0.52  phi=  1.49
+ Partition admittance Y=  4.98  w=  1.41 surface factor f=  0.49  phi=  1.73
+ Total area of internal_wall_3bricks is     44.87
+ 
+ Details of opaque construction: ten_ceiling and overall thickness  0.222
+ In category general constructions also shown in menus as: tenement last-floor flat ceiling
+no documentation yet for ten_ceiling ingeneral constructions
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext   200.0     0.100   500.  1000. 0.90 0.50     5.  2.00 100.0 woodwool : Woodwool (organic-hygroscopic)
+    2   10.0     0.130   630.  2760. 0.90 0.65    12.  0.08   6.3 softwood : Softwood (generic)
+ Int    12.0     0.700  1400.   920. 0.91 0.70    10.  0.02  16.8 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  0.442  0.448  0.434 (partition)  0.425
+ Weight per m^2 of this construction 123.10
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  0.44
+ External surface admittance Y=  2.87  w=  3.08 decrement factor f=  0.80  phi=  1.20 surface factor f=  0.80  phi=  1.20
+ Partition admittance Y=  3.03  w=  3.05 surface factor f=  0.79  phi=  1.28
+ Total area of ten_ceiling is     80.55
+ 
+ Details of opaque construction: main_door and overall thickness  0.030
+ In category general constructions also shown in menus as: main door
+no documentation yet for main door ingeneral constructions
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+    1   30.0     0.130   900.  2000. 0.91 0.70   140.  0.23  27.0 Hardboard std : Hardboard (standard density)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.495  2.697  2.269 (partition)  2.038
+ Weight per m^2 of this construction  27.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.43
+ External surface admittance Y=  2.73  w=  1.10 decrement factor f=  0.69  phi=  0.51 surface factor f=  0.69  phi=  0.51
+ Partition admittance Y=  1.63  w=  5.06 surface factor f=  0.97  phi=  0.75
+ Total area of main_door is      2.65
+ 
+ Details of opaque construction: internal_partition_1brick and overall thickness  0.150
+ In category internals also shown in menus as: internal partition of bricks
+no documentation yet for ten_internal_partition ingeneral constructions
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+    2  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.793  3.048  2.512 (partition)  2.232
+ Weight per m^2 of this construction 243.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.72
+ External surface admittance Y=  4.39  w=  1.50 decrement factor f=  0.55  phi=  1.43 surface factor f=  0.55  phi=  1.43
+ Partition admittance Y=  4.57  w=  3.22 surface factor f=  0.76  phi=  2.19
+ Total area of internal_partition_1brick is     44.86
+ 
+ Details of opaque construction: main_door and overall thickness  0.030
+ In category doors also shown in menus as: main_door
+no documentation yet for main_door indoors
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+    1   30.0     0.130   900.  2000. 0.91 0.70   140.  0.23  27.0 Hardboard std : Hardboard (standard density)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.495  2.697  2.269 (partition)  2.038
+ Weight per m^2 of this construction  27.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.43
+ External surface admittance Y=  2.73  w=  1.10 decrement factor f=  0.69  phi=  0.51 surface factor f=  0.69  phi=  0.51
+ Partition admittance Y=  1.63  w=  5.06 surface factor f=  0.97  phi=  0.75
+ Total area of main_door is      2.65
+ 
+ Details of opaque construction: int_part_plast and overall thickness  0.074
+ In category internals also shown in menus as: internal partition plasterboard
+no documentation yet for int_part_plast ininternals
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    12.0     0.160   800.  1090. 0.90 0.90    10.  0.08   9.6 gypsum board : Gypsum board
+    2   50.0     0.000     0.     0. 0.99 0.99     1.  0.17   0.1 air  0.17 0.17 0.17
+ Int    12.0     0.160   800.  1090. 0.90 0.90    10.  0.08   9.6 gypsum board : Gypsum board
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.041  2.174  1.887 (partition)  1.724
+ Weight per m^2 of this construction  19.26
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.00
+ External surface admittance Y=  2.07  w=  0.72 decrement factor f=  0.76  phi=  0.23 surface factor f=  0.76  phi=  0.23
+ Partition admittance Y=  0.67  w=  5.65 surface factor f=  1.00  phi=  0.31
+ Total area of int_part_plast is     20.46
+ 
+ Details of opaque construction: tile_roof and overall thickness  0.059
+ In category general constructions also shown in menus as: sloped tile non-insulated roof
+no documentation yet for tile_roof ingeneral constructions
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    20.0     1.100  2100.   837. 0.90 0.65    20.  0.02  42.0 concrete tile : Concrete tile (inorganic-porous)
+    2   25.0     0.000     0.     0. 0.99 0.99     1.  0.17   0.0 air  0.17 0.17 0.17
+    3    2.0     0.060  1090.  1000. 0.90 0.90  3000.  0.03   2.2 bitumen paper : Bitumen impregnated paper (organic hygroscopic)
+ Int    12.0     0.150   700.  1420. 0.90 0.65   576.  0.08   8.4 plywood 700d : Plywood (700 density)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.121  2.265  1.955 (partition)  1.781
+ Weight per m^2 of this construction  52.61
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.08
+ External surface admittance Y=  2.19  w=  0.85 decrement factor f=  0.75  phi=  0.30 surface factor f=  0.75  phi=  0.30
+ Partition admittance Y=  1.02  w=  5.39 surface factor f=  0.99  phi=  0.47
+ Total area of tile_roof is     42.58
+ 
+ Details of opaque construction: int_door and overall thickness  0.015
+ In category doors also shown in menus as: int_door
+no documentation yet for int_door indoors
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+    1   15.0     0.080   600.  2000. 0.91 0.70   110.  0.19   9.0 Hardboard medium : Hardboard (medium density)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.797  3.053  2.516 (partition)  2.235
+ Weight per m^2 of this construction   9.00
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.72
+ External surface admittance Y=  2.75  w=  0.36 decrement factor f=  0.67  phi=  0.17 surface factor f=  0.67  phi=  0.17
+ Partition admittance Y=  0.55  w=  5.70 surface factor f=  1.00  phi=  0.25
+ Total area of int_door is      6.26
+ 
+ Details of opaque construction: double_glz and overall thickness  0.024
+ In category windows also shown in menus as: double glazed window
+no documentation yet for double_glz inwindows
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext     6.0     0.760  2710.   837. 0.83 0.05 19200.  0.01  16.3 plate glass : Plate glass with placeholder single layer optics
+    2   12.0     0.071     1.  1006. 0.99 0.99     1.  0.17   0.0 Air (k) 12mm glz : Air (as k value) in double glazing 12mm
+ Int     6.0     0.760  2710.   837. 0.83 0.05 19200.  0.01  16.3 plate glass : Plate glass with placeholder single layer optics
+ ISO 6946 U values (horiz/upward/downward heat flow)=  2.818  3.079  2.533 (partition)  2.248
+ Weight per m^2 of this construction  32.53
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  2.74
+ External surface admittance Y=  2.82  w=  0.62 decrement factor f=  0.67  phi=  0.31 surface factor f=  0.67  phi=  0.31
+ Partition admittance Y=  0.82  w=  5.64 surface factor f=  1.00  phi=  0.38
+ Total area of double_glz is      7.05
+ 
+ Details of opaque construction: ten_floor_ins and overall thickness  0.379
+ In category general constructions also shown in menus as: ten_floor_ins
+no documentation yet for ten_floor_ins
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    12.0     0.700  1400.   920. 0.91 0.70    10.  0.02  16.8 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+    2   10.0     0.560   350.  1000. 0.90 0.65    13.  0.02   3.5 Softboard : Softboard (source does not clarify what it is)
+    3   50.0     0.000     0.     0. 0.99 0.99     1.  0.17   0.1 air  0.17 0.17 0.17
+    4   20.0     0.160   950.  2093. 0.91 0.65    11.  0.12  19.0 floorboards : floorboards (milton keynes)
+    5   80.0     0.300  1100.  1000. 0.90 0.65   100.  0.27  88.0 ash_deafening : ash_deafening used in tenement floors
+    6  150.0     0.000     0.     0. 0.99 0.99     1.  0.17   0.2 air  0.17 0.17 0.17
+    7   40.0     0.160   950.  2093. 0.91 0.65    11.  0.25  38.0 floorboards : floorboards (milton keynes)
+    8   12.0     0.040   105.  1800. 0.90 0.60    15.  0.30   1.3 cork insulation : Cork insulation (organic-hygroscopic)
+ Int     5.0     0.060   160.  2500. 0.90 0.65    10.  0.08   0.8 synthetic carpet : Synthetic carpet (non-hygroscopic)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  0.637  0.649  0.621 (partition)  0.602
+ Weight per m^2 of this construction 167.60
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  0.63
+ External surface admittance Y=  1.58  w=  1.24 decrement factor f=  0.82  phi=  0.28 surface factor f=  0.82  phi=  0.28
+ Partition admittance Y=  1.70  w=  1.24 surface factor f=  0.81  phi=  0.31
+ Total area of ten_floor_ins is     40.27
+ 
+ Details of opaque construction: internal_wall_3bricks_ins and overall thickness  0.382
+ In category internals also shown in menus as: internal_wall_3bricks_ins
+no documentation yet for internal_wall_3bricks_ins
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+    2  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    3  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    4  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    5   12.0     0.040   105.  1800. 0.90 0.60    15.  0.30   1.3 cork insulation : Cork insulation (organic-hygroscopic)
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  1.087  1.124  1.042 (partition)  0.990
+ Weight per m^2 of this construction 618.26
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  1.08
+ External surface admittance Y=  2.52  w=  2.06 decrement factor f=  0.76  phi=  0.79 surface factor f=  0.76  phi=  0.79
+ Partition admittance Y=  2.67  w=  1.96 surface factor f=  0.74  phi=  0.82
+ Total area of internal_wall_3bricks_ins is     24.73
+ 
+ Details of opaque construction: extern_wall_ins and overall thickness  0.612
+ In category general constructions also shown in menus as: extern_wall_ins
+no documentation yet for extern_wall_ins
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext   300.0     1.830  2200.   712. 0.90 0.60    29.  0.16 660.0 sandstone : Sandstone
+    2   80.0     0.200  1000.  1000. 0.90 0.70     5.  0.40  80.0 LECA-limecrete : Lightweight expanded clay aggr in limecrete K is about 0.2 (estim
+    3  200.0     1.830  2200.   712. 0.90 0.60    29.  0.11 440.0 sandstone : Sandstone
+    4   12.0     0.040   105.  1800. 0.90 0.60    15.  0.30   1.3 cork insulation : Cork insulation (organic-hygroscopic)
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  0.853  0.876  0.825 (partition)  0.793
+ Weight per m^2 of this construction1209.26
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  0.85
+ External surface admittance Y=  2.56  w=  1.82 decrement factor f=  0.74  phi=  0.73 surface factor f=  0.74  phi=  0.73
+ Partition admittance Y=  2.56  w=  1.78 surface factor f=  0.74  phi=  0.72
+ Total area of extern_wall_ins is     14.47
+ 
+ Details of opaque construction: int_wall_3bricks_extinsul and overall thickness  0.382
+ In category internals also shown in menus as: int_wall_3bricks_extinsul
+no documentation yet for int_wall_3bricks_extinsul
+ 
+ Layer|Thick |Conduc-|Density|Specif|IR  |Solar|Diffu| R    | Kg |Description
+      |(mm)  |tivity |       |heat  |emis|abs  |resis|m^2K/W| m^2|
+ Ext    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+    2   12.0     0.040   105.  1800. 0.90 0.60    15.  0.30   1.3 cork insulation : Cork insulation (organic-hygroscopic)
+    3  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    4  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+    5  110.0     0.840  1700.   800. 0.90 0.70    25.  0.13 187.0 brick (MK) : Brick (milton keyns)
+ Int    20.0     0.700  1400.   920. 0.91 0.70    10.  0.03  28.0 lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+ ISO 6946 U values (horiz/upward/downward heat flow)=  1.087  1.124  1.042 (partition)  0.990
+ Weight per m^2 of this construction 618.26
+ 
+Admittance calculations using Rsi   0.12 Rso   0.06 & Uvalue=  1.08
+ External surface admittance Y=  4.59  w=  1.40 decrement factor f=  0.52  phi=  1.47 surface factor f=  0.52  phi=  1.47
+ Partition admittance Y=  4.73  w=  1.37 surface factor f=  0.51  phi=  1.53
+ Total area of int_wall_3bricks_extinsul is     11.72

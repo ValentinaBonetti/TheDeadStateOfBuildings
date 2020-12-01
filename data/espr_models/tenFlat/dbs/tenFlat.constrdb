@@ -1,0 +1,154 @@
+*CONSTRUCTIONS,1.0 # multilayer constructions
+*Text
+No documentation included (yet)
+*End_text
+*date,Fri Feb  1 16:41:37 2019
+*Category,general constructions,general constructions,Category general constructions includes all of the MLC constructions in the file.
+*Category,doors,doors,Category ( 2) named doors was inserted manually. No other documentation (yet).
+*Category,internals,internals,Category ( 3) named internals was inserted manually. No other documentation (yet).
+*Category,windows,windows,Category ( 4) named windows was inserted manually. No other documentation (yet).
+#
+*item,extern_wall,tenement external wall # tag name menu entry
+*itemdoc,extern_wall  is a ...
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,81,0.3000,sandstone : Sandstone
+*layer,270,0.0800,LECA-limecrete : Lightweight expanded clay aggr in limecrete K is about
+*layer,81,0.2000,sandstone : Sandstone
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,internal_wall_3bricks,tenement int. wall between flats # tag name menu entry
+*itemdoc,no documentation yet for tenement internal wall ingeneral constructions
+*incat,internals
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,ten_floor,ash-deafened floor between flats # tag name menu entry
+*itemdoc,no documentation yet for ten_floor ingeneral constructions
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,113,0.0120,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,73,0.0100,Softboard : Softboard (source does not clarify what it is)
+*layer,0,0.0500,gap  0.17 0.17 0.17
+*layer,75,0.0200,floorboards : floorboards (milton keynes)
+*layer,312,0.0800,ash_deafening : ash_deafening used in tenement floors
+*layer,0,0.1500,gap  0.17 0.17 0.17
+*layer,75,0.0400,floorboards : floorboards (milton keynes)
+*layer,225,0.0050,synthetic carpet : Synthetic carpet (non-hygroscopic)
+*end_item
+*item,ten_ceiling,tenement last-floor flat ceiling # tag name menu entry
+*itemdoc,no documentation yet for ten_ceiling ingeneral constructions
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,202,0.2000,woodwool : Woodwool (organic-hygroscopic)
+*layer,71,0.0100,softwood : Softwood (generic)
+*layer,113,0.0120,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,main_door,main door # tag name menu entry
+*itemdoc,no documentation yet for main door ingeneral constructions
+*incat,general constructions
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,63,0.0300,Hardboard std : Hardboard (standard density)
+*end_item
+*item,internal_partition_1brick,internal partition of bricks # tag name menu entry
+*itemdoc,no documentation yet for ten_internal_partition ingeneral constructions
+*incat,internals
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,main_door,main_door # tag name menu entry
+*itemdoc,no documentation yet for main_door indoors
+*incat,doors
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,63,0.0300,Hardboard std : Hardboard (standard density)
+*end_item
+*item,int_part_plast,internal partition plasterboard # tag name menu entry
+*itemdoc,no documentation yet for int_part_plast ininternals
+*incat,internals
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,301,0.0120,gypsum board : Gypsum board
+*layer,0,0.0500,gap  0.17 0.17 0.17
+*layer,301,0.0120,gypsum board : Gypsum board
+*end_item
+*item,tile_roof,sloped tile non-insulated roof # tag name menu entry
+*itemdoc,no documentation yet for tile_roof ingeneral constructions
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,142,0.0200,concrete tile : Concrete tile (inorganic-porous)
+*layer,0,0.0250,gap  0.17 0.17 0.17
+*layer,166,0.0020,bitumen paper : Bitumen impregnated paper (organic hygroscopic)
+*layer,72,0.0120,plywood 700d : Plywood (700 density)
+*end_item
+*item,int_door,int_door # tag name menu entry
+*itemdoc,no documentation yet for int_door indoors
+*incat,doors
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,62,0.0150,Hardboard medium : Hardboard (medium density)
+*end_item
+*item,double_glz,double glazed window # tag name menu entry
+*itemdoc,no documentation yet for double_glz inwindows
+*incat,windows
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,242,0.0060,plate glass : Plate glass with placeholder single layer optics
+*layer,342,0.0120,Air (k) 12mm glz : Air (as k value) in double glazing 12mm
+*layer,242,0.0060,plate glass : Plate glass with placeholder single layer optics
+*end_item
+*item,single_glz,single_glz # tag name menu entry
+*itemdoc,no documentation yet for single_glz inwindows
+*incat,windows
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,243,0.0060,clear float : clear float glass with optics from UK national method dat
+*end_item
+*item,ten_floor_ins,ten_floor_ins # tag name menu entry
+*itemdoc,no documentation yet for ten_floor_ins
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,113,0.0120,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,73,0.0100,Softboard : Softboard (source does not clarify what it is)
+*layer,0,0.0500,gap  0.17 0.17 0.17
+*layer,75,0.0200,floorboards : floorboards (milton keynes)
+*layer,312,0.0800,ash_deafening : ash_deafening used in tenement floors
+*layer,0,0.1500,gap  0.17 0.17 0.17
+*layer,75,0.0400,floorboards : floorboards (milton keynes)
+*layer,217,0.0120,cork insulation : Cork insulation (organic-hygroscopic)
+*layer,225,0.0050,synthetic carpet : Synthetic carpet (non-hygroscopic)
+*end_item
+*item,internal_wall_3bricks_ins,internal_wall_3bricks_ins # tag name menu entry
+*itemdoc,no documentation yet for internal_wall_3bricks_ins
+*incat,internals
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,217,0.0120,cork insulation : Cork insulation (organic-hygroscopic)
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,extern_wall_ins,extern_wall_ins # tag name menu entry
+*itemdoc,no documentation yet for extern_wall_ins
+*incat,general constructions
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,81,0.3000,sandstone : Sandstone
+*layer,270,0.0800,LECA-limecrete : Lightweight expanded clay aggr in limecrete K is about
+*layer,81,0.2000,sandstone : Sandstone
+*layer,217,0.0120,cork insulation : Cork insulation (organic-hygroscopic)
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*item,int_wall_3bricks_extinsul,int_wall_3bricks_extinsul # tag name menu entry
+*itemdoc,no documentation yet for int_wall_3bricks_extinsul
+*incat,internals
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*layer,217,0.0120,cork insulation : Cork insulation (organic-hygroscopic)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,7,0.1100,brick (MK) : Brick (milton keyns)
+*layer,113,0.0200,lime plaster : lime plaster from IBO PassivHaus (inorganic-porous)
+*end_item
+*db_end
