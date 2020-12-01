@@ -1,6 +1,11 @@
 ## Folders
 potentialImages/
 
+## all pdfs
+*.pdf
+**/*.pdf
+**/**/*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
